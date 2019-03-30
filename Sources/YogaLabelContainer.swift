@@ -10,10 +10,12 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 //
-// Created by Deng Jinlong on 2019-01-19.
+// Created by Deng Jinlong on 2018-01-19.
 
 import YogaKit
 
+// Make UILabel easy to use in Yoga or In row direction label need set shrink property to control length.
+// so this class is used for fixed width view or in width grow view
 public class YogaLabelContainer: UIView {
     let label: UILabel!
     public var textAlign: NSTextAlignment = .left
@@ -53,12 +55,14 @@ public class YogaLabelContainer: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // if height is given, `sizeThatFits` not invoked,
-    // and returned width of size not used,
-    // so we can suppose `sizeThatFits` useed to calculate height
+    // On the main direction, the value(height or width) is determined by `sizeThatFits`, if value is given, `sizeThatFits` not invoked
+    // Eg. Column direction,  if height is given, `sizeThatFits` not invoked
+    // else `sizeThatFits` invoked, only height is accepted
+    // but impossible to know the direction inside this class, so return 0 width always.
+    // Again, remain that YogaLabelContainer 's job is apart UILabel from Yoga layout.
     public override func sizeThatFits(_ size: CGSize) -> CGSize {
         let labelSize = label.sizeThatFits(size)
-        return CGSize(width: min(labelSize.width, size.width), height: min(labelSize.height, size.height))
+        return CGSize(width: 0, height: min(labelSize.height, size.height))
     }
 }
 

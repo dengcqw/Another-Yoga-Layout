@@ -10,7 +10,7 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 //
-// Created by Deng Jinlong on 2019-01-19.
+// Created by Deng Jinlong on 2018-01-19.
 
 import YogaKit
 
@@ -52,11 +52,7 @@ fileprivate func yg_assert(condition: Bool, message: String) {
 public class YogaLayoutBase {
     fileprivate let view: UIView!
     public init(_ view: UIView) {
-        if let label = view as? UILabel {
-            self.view = YogaLabelContainer(label)
-        } else {
-            self.view = view
-        }
+        self.view = view
         self.view.yoga.markDirty()
         self.view.yoga.isEnabled = true
     }
@@ -268,6 +264,11 @@ extension YogaContainerLayout {
     }
     
     @discardableResult
+    public func crossAxisChild(_ child: UIView, align: YGAlign) -> Self {
+        return crossAxisChild(at: child.ygIndex ?? Int.max, align: align)
+    }
+    
+    @discardableResult
     public func growChild(at index: Int, score: CGFloat = 1) -> Self {
         yg_assert(condition: subviews.count > 0, message: "no subviews")
         if index < subviews.count {
@@ -309,8 +310,7 @@ extension YogaContainerLayout {
     
     @discardableResult
     public func shrinkChild(_ child: UIView, score: CGFloat = 1) -> Self {
-        shrinkChild(at: child.ygIndex ?? Int.max, score: score)
-        return self
+        return shrinkChild(at: child.ygIndex ?? Int.max, score: score)
     }
     
     @discardableResult
@@ -337,6 +337,11 @@ extension YogaContainerLayout {
             subviews[index].yoga.flexBasis = YGValue(value)
         }
         return self
+    }
+    
+    @discardableResult
+    public func setChildBasis(_ child: UIView, value: CGFloat) -> Self {
+       return setChildBasis(at: child.ygIndex ?? Int.max, value: value)
     }
     
     @discardableResult
