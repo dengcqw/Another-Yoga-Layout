@@ -7,10 +7,11 @@ Pod::Spec.new do |spec|
   spec.authors = { "dengjinlong" => 'dengcqw@qiyi.com' }
   spec.social_media_url = ""
 
-  spec.platform = :ios, "9.1"
+  spec.platform = :ios, "9.0"
   spec.requires_arc = true
   spec.source = { git: "https://github.com/dengcqw/Another-Yoga-Wrapper.git" }
   spec.source_files = "{Sources}/*.{swift}"
   spec.frameworks = 'UIKit'
   spec.dependency 'YogaKit', '~> 1.9'
+  spec.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) YOGA=1' }
 end

@@ -1,12 +1,14 @@
 PODS:
   - AnotherYogaWrapper (0.0.1):
     - YogaKit (~> 1.9)
+  - TableViewAdaptor (0.0.1)
   - Yoga (1.9.0)
   - YogaKit (1.9.0):
     - Yoga (~> 1.9)
 
 DEPENDENCIES:
   - AnotherYogaWrapper (from `../AnotherYogaWrapper.podspec`)
+  - TableViewAdaptor (from `https://github.com/dengcqw/Another-UITableView-Adaptor.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -16,12 +18,20 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   AnotherYogaWrapper:
     :path: "../AnotherYogaWrapper.podspec"
+  TableViewAdaptor:
+    :git: https://github.com/dengcqw/Another-UITableView-Adaptor.git
+
+CHECKOUT OPTIONS:
+  TableViewAdaptor:
+    :commit: 4d8283d033f4fc3c21cf0504fc7181e861496268
+    :git: https://github.com/dengcqw/Another-UITableView-Adaptor.git
 
 SPEC CHECKSUMS:
-  AnotherYogaWrapper: 0afd37130916264d7e756173a0e26b9e6c3aa1f7
+  AnotherYogaWrapper: 8b51708bebf2d48be79328c82e3b218db4582a87
+  TableViewAdaptor: 144524686e7549b48610071fc4584bfc55e56df2
   Yoga: aaae8abea68951f60bee05f6277d3eed90bb91bb
   YogaKit: d447a9bb808718e6f58e52a2255a8050081a3ead
 
-PODFILE CHECKSUM: 94b9e19758a3c6ca8907858ea8c1be20a9e832e0
+PODFILE CHECKSUM: f78fc3370d7ba973f61cbfdac8b40cbdf6cd6d87
 
 COCOAPODS: 1.5.3

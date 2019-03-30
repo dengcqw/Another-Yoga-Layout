@@ -1,10 +1,16 @@
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+// ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+// LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+// CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+// SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+// INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+// CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+// POSSIBILITY OF SUCH DAMAGE.
 //
-//  YogaLayoutHelper.swift
-//  TVGuor
-//
-//  Created by Deng Jinlong on 2018/10/30.
-//  Copyright © 2018 xiaoguo. All rights reserved.
-//
+// Created by Deng Jinlong on 2019-01-19.
 
 import YogaKit
 
@@ -20,6 +26,9 @@ public extension UIView {
     }
     var ygAbsoluteLayout: YogaAbsoluteLayout {
         return YogaAbsoluteLayout(self)
+    }
+    fileprivate var ygIndex: Int? {
+        return superview?.subviews.firstIndex(of: self)
     }
 }
 
@@ -89,23 +98,27 @@ public class YogaRelativeLayout: YogaLayoutBase {
         view.yoga.width = YGValue(width)
         return self
     }
+    
     @discardableResult
     public func width(min: CGFloat? = nil, max: CGFloat? = nil) -> Self {
         view.yoga.minWidth = YGValue(min)
         view.yoga.maxWidth = YGValue(max)
         return self
     }
+    
     @discardableResult
     public func height(_ height: CGFloat) -> Self {
         view.yoga.height = YGValue(height)
         return self
     }
+    
     @discardableResult
     public func height(_ height: CGFloat, min: CGFloat? = nil, max: CGFloat? = nil) -> Self {
         view.yoga.minHeight = YGValue(min)
         view.yoga.maxHeight = YGValue(max)
         return self
     }
+    
     @discardableResult
     public func margin(top: CGFloat? = nil, left: CGFloat? = nil , bottom: CGFloat? = nil, right: CGFloat? = nil) -> Self {
         view.yoga.marginTop = YGValue(top)
@@ -114,22 +127,26 @@ public class YogaRelativeLayout: YogaLayoutBase {
         view.yoga.marginRight = YGValue(right)
         return self
     }
+    
     @discardableResult
     public func margin(horizontal: CGFloat? = nil, vertical: CGFloat? = nil) -> Self {
         view.yoga.marginHorizontal = YGValue(horizontal)
         view.yoga.marginVertical = YGValue(vertical)
         return self
     }
+    
     @discardableResult
     public func margin(_ edge: UIEdgeInsets) -> Self {
         margin(top: edge.top, left: edge.left, bottom: edge.bottom, right: edge.right)
         return self
     }
+    
     @discardableResult
     public func margin(_ value: CGFloat) -> Self {
         view.yoga.margin = YGValue(value)
         return self
     }
+    
     @discardableResult
     public func padding(top: CGFloat? = nil, left: CGFloat? = nil , bottom: CGFloat? = nil, right: CGFloat? = nil) -> Self {
         view.yoga.paddingTop = YGValue(top)
@@ -138,12 +155,14 @@ public class YogaRelativeLayout: YogaLayoutBase {
         view.yoga.paddingRight = YGValue(right)
         return self
     }
+    
     @discardableResult
     public func padding(horizontal: CGFloat? = nil, vertical: CGFloat? = nil) -> Self {
         view.yoga.paddingHorizontal = YGValue(horizontal)
         view.yoga.paddingVertical = YGValue(vertical)
         return self
     }
+    
     @discardableResult
     public func padding(_ value: CGFloat) -> Self {
         view.yoga.padding = YGValue(value)
@@ -198,11 +217,13 @@ public class YogaContainerLayout: YogaLayoutBase {
         view.addSubview(subview)
         return self
     }
+    
     @discardableResult
     public func add(_ builders: [YogaLayoutBase]) -> Self {
         builders.forEach { self.add($0) }
         return self
     }
+    
     override func _applyLayout() {
         container.yoga.applyLayout(preservingOrigin: true)
     }
@@ -216,6 +237,7 @@ extension YogaContainerLayout {
         container.yoga.alignItems = .center
         return self
     }
+    
     @discardableResult
     public func column() -> Self {
         container.yoga.flexDirection = .column
@@ -223,16 +245,19 @@ extension YogaContainerLayout {
         container.yoga.alignItems = .center
         return self
     }
+    
     @discardableResult
     public func mainAxis(_ justify: YGJustify) -> Self {
         container.yoga.justifyContent = justify
         return self
     }
+    
     @discardableResult
     public func crossAxis(_ align: YGAlign) -> Self {
         container.yoga.alignItems = align
         return self
     }
+    
     @discardableResult
     public func crossAxisChild(at index: Int, align: YGAlign) -> Self {
         yg_assert(condition: subviews.count > 0, message: "no subviews")
@@ -241,6 +266,7 @@ extension YogaContainerLayout {
         }
         return self
     }
+    
     @discardableResult
     public func growChild(at index: Int, score: CGFloat = 1) -> Self {
         yg_assert(condition: subviews.count > 0, message: "no subviews")
@@ -249,6 +275,12 @@ extension YogaContainerLayout {
         }
         return self
     }
+    
+    @discardableResult
+    public func growChild(_ child: UIView, score: CGFloat = 1) -> Self {
+        return growChild(at: child.ygIndex ?? Int.max, score: score)
+    }
+    
     @discardableResult
     public func growChildren(scores: [CGFloat] = []) -> Self {
         yg_assert(condition: subviews.count > 0, message: "no subviews")
@@ -265,6 +297,7 @@ extension YogaContainerLayout {
         }
         return self
     }
+    
     @discardableResult
     public func shrinkChild(at index: Int, score: CGFloat = 1) -> Self {
         yg_assert(condition: subviews.count > 0, message: "no subviews")
@@ -273,6 +306,13 @@ extension YogaContainerLayout {
         }
         return self
     }
+    
+    @discardableResult
+    public func shrinkChild(_ child: UIView, score: CGFloat = 1) -> Self {
+        shrinkChild(at: child.ygIndex ?? Int.max, score: score)
+        return self
+    }
+    
     @discardableResult
     public func shrinkChildren(scores: [CGFloat] = []) -> Self {
         yg_assert(condition: subviews.count > 0, message: "no subviews")
@@ -289,6 +329,7 @@ extension YogaContainerLayout {
         }
         return self
     }
+    
     @discardableResult
     public func setChildBasis(at index: Int, value: CGFloat) -> Self {
         yg_assert(condition: subviews.count > 0, message: "no subviews")
@@ -297,12 +338,14 @@ extension YogaContainerLayout {
         }
         return self
     }
+    
     @discardableResult
     public func setChildrenBasis(value: CGFloat) -> Self {
         yg_assert(condition: subviews.count > 0, message: "no subviews")
         subviews.forEach { $0.yoga.flexBasis = YGValue(value) }
         return self
     }
+    
     @discardableResult
     public func overflow(_ overflow: YGOverflow) -> Self {
         container.yoga.overflow = overflow
@@ -315,6 +358,7 @@ public class YogaWrapLayout: YogaContainerLayout {
         super.init(view)
         container.yoga.flexWrap = .wrap
     }
+    
     public func justityContent(_ justify: YGJustify) -> Self {
         container.yoga.justifyContent = justify
         return self

@@ -1,12 +1,18 @@
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+// ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+// LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+// CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+// SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+// INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+// CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+// POSSIBILITY OF SUCH DAMAGE.
 //
-//  YogaScrollViewControler.swift
-//  TVGuor
-//
-//  Created by Deng Jinlong on 2018/10/30.
-//  Copyright © 2018 xiaoguo. All rights reserved.
-//
+// Created by Deng Jinlong on 2019-01-19.
 
-public class YogaScrollViewControler: UIViewController {
+open class YogaScrollViewControler: UIViewController {
     public let scrollView = UIScrollView()
     public let contentView = UIView()
 
@@ -18,13 +24,13 @@ public class YogaScrollViewControler: UIViewController {
         assertionFailure("updateLayout need override")
     }
 
-    public override func loadView() {
+    open override func loadView() {
         super.loadView()
         self.view.addSubview(scrollView)
         scrollView.addSubview(contentView)
     }
 
-    public override func viewWillLayoutSubviews() {
+    open override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         let bounds = self.view.bounds
         scrollView.frame = bounds

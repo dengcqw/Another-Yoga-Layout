@@ -8,6 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		25453A2409000156CBCC6C24 /* Pods_LayoutDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A9A7A75F4B11F4432C1DF3 /* Pods_LayoutDemo.framework */; };
+		982831C4224F153D00C32EEB /* AudioEffectListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982831C3224F153D00C32EEB /* AudioEffectListController.swift */; };
+		982831C6224F159C00C32EEB /* AudioEffectListController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982831C5224F159C00C32EEB /* AudioEffectListController+Ext.swift */; };
+		982831C8224F16B800C32EEB /* SingleObjMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982831C7224F16B800C32EEB /* SingleObjMap.swift */; };
+		982831CA224F182900C32EEB /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982831C9224F182900C32EEB /* NSAttributedString+Extension.swift */; };
+		982831DE224F1C3700C32EEB /* Player_AudioEffect_2@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831CC224F1C3700C32EEB /* Player_AudioEffect_2@1x.png */; };
+		982831DF224F1C3700C32EEB /* Player_AudioEffect_5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831CD224F1C3700C32EEB /* Player_AudioEffect_5@3x.png */; };
+		982831E0224F1C3700C32EEB /* Player_AudioEffect_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831CE224F1C3700C32EEB /* Player_AudioEffect_5@2x.png */; };
+		982831E1224F1C3700C32EEB /* Player_AudioEffect_3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831CF224F1C3700C32EEB /* Player_AudioEffect_3@3x.png */; };
+		982831E2224F1C3700C32EEB /* Player_AudioEffect_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831D0224F1C3700C32EEB /* Player_AudioEffect_1@2x.png */; };
+		982831E3224F1C3700C32EEB /* Player_AudioEffect_4@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831D1224F1C3700C32EEB /* Player_AudioEffect_4@1x.png */; };
+		982831E4224F1C3700C32EEB /* Player_AudioEffect_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831D2224F1C3700C32EEB /* Player_AudioEffect_1@3x.png */; };
+		982831E5224F1C3700C32EEB /* Player_AudioEffect_6@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831D3224F1C3700C32EEB /* Player_AudioEffect_6@1x.png */; };
+		982831E6224F1C3700C32EEB /* Player_AudioEffect_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831D4224F1C3700C32EEB /* Player_AudioEffect_3@2x.png */; };
+		982831E7224F1C3700C32EEB /* Player_AudioEffect_4@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831D5224F1C3700C32EEB /* Player_AudioEffect_4@3x.png */; };
+		982831E8224F1C3700C32EEB /* Player_AudioEffect_6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831D6224F1C3700C32EEB /* Player_AudioEffect_6@2x.png */; };
+		982831E9224F1C3700C32EEB /* Player_AudioEffect_3@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831D7224F1C3700C32EEB /* Player_AudioEffect_3@1x.png */; };
+		982831EA224F1C3700C32EEB /* Player_AudioEffect_6@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831D8224F1C3700C32EEB /* Player_AudioEffect_6@3x.png */; };
+		982831EB224F1C3700C32EEB /* Player_AudioEffect_1@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831D9224F1C3700C32EEB /* Player_AudioEffect_1@1x.png */; };
+		982831EC224F1C3700C32EEB /* Player_AudioEffect_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831DA224F1C3700C32EEB /* Player_AudioEffect_4@2x.png */; };
+		982831ED224F1C3700C32EEB /* Player_AudioEffect_5@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831DB224F1C3700C32EEB /* Player_AudioEffect_5@1x.png */; };
+		982831EE224F1C3700C32EEB /* Player_AudioEffect_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831DC224F1C3700C32EEB /* Player_AudioEffect_2@3x.png */; };
+		982831EF224F1C3700C32EEB /* Player_AudioEffect_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831DD224F1C3700C32EEB /* Player_AudioEffect_2@2x.png */; };
+		982831F2224F1E1F00C32EEB /* tips@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831F0224F1E1E00C32EEB /* tips@2x.png */; };
+		982831F3224F1E1F00C32EEB /* tips@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 982831F1224F1E1F00C32EEB /* tips@3x.png */; };
 		9835276B224E5A74004FA321 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835276A224E5A74004FA321 /* AppDelegate.swift */; };
 		9835276D224E5A74004FA321 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835276C224E5A74004FA321 /* ViewController.swift */; };
 		98352770224E5A74004FA321 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9835276E224E5A74004FA321 /* Main.storyboard */; };
@@ -18,6 +42,30 @@
 /* Begin PBXFileReference section */
 		01DE39E5425CEDFEE1243DFD /* Pods-LayoutDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayoutDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LayoutDemo/Pods-LayoutDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		95A9A7A75F4B11F4432C1DF3 /* Pods_LayoutDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LayoutDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		982831C3224F153D00C32EEB /* AudioEffectListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioEffectListController.swift; sourceTree = "<group>"; };
+		982831C5224F159C00C32EEB /* AudioEffectListController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioEffectListController+Ext.swift"; sourceTree = "<group>"; };
+		982831C7224F16B800C32EEB /* SingleObjMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleObjMap.swift; sourceTree = "<group>"; };
+		982831C9224F182900C32EEB /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		982831CC224F1C3700C32EEB /* Player_AudioEffect_2@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_2@1x.png"; sourceTree = "<group>"; };
+		982831CD224F1C3700C32EEB /* Player_AudioEffect_5@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_5@3x.png"; sourceTree = "<group>"; };
+		982831CE224F1C3700C32EEB /* Player_AudioEffect_5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_5@2x.png"; sourceTree = "<group>"; };
+		982831CF224F1C3700C32EEB /* Player_AudioEffect_3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_3@3x.png"; sourceTree = "<group>"; };
+		982831D0224F1C3700C32EEB /* Player_AudioEffect_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_1@2x.png"; sourceTree = "<group>"; };
+		982831D1224F1C3700C32EEB /* Player_AudioEffect_4@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_4@1x.png"; sourceTree = "<group>"; };
+		982831D2224F1C3700C32EEB /* Player_AudioEffect_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_1@3x.png"; sourceTree = "<group>"; };
+		982831D3224F1C3700C32EEB /* Player_AudioEffect_6@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_6@1x.png"; sourceTree = "<group>"; };
+		982831D4224F1C3700C32EEB /* Player_AudioEffect_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_3@2x.png"; sourceTree = "<group>"; };
+		982831D5224F1C3700C32EEB /* Player_AudioEffect_4@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_4@3x.png"; sourceTree = "<group>"; };
+		982831D6224F1C3700C32EEB /* Player_AudioEffect_6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_6@2x.png"; sourceTree = "<group>"; };
+		982831D7224F1C3700C32EEB /* Player_AudioEffect_3@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_3@1x.png"; sourceTree = "<group>"; };
+		982831D8224F1C3700C32EEB /* Player_AudioEffect_6@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_6@3x.png"; sourceTree = "<group>"; };
+		982831D9224F1C3700C32EEB /* Player_AudioEffect_1@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_1@1x.png"; sourceTree = "<group>"; };
+		982831DA224F1C3700C32EEB /* Player_AudioEffect_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_4@2x.png"; sourceTree = "<group>"; };
+		982831DB224F1C3700C32EEB /* Player_AudioEffect_5@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_5@1x.png"; sourceTree = "<group>"; };
+		982831DC224F1C3700C32EEB /* Player_AudioEffect_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_2@3x.png"; sourceTree = "<group>"; };
+		982831DD224F1C3700C32EEB /* Player_AudioEffect_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_AudioEffect_2@2x.png"; sourceTree = "<group>"; };
+		982831F0224F1E1E00C32EEB /* tips@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tips@2x.png"; sourceTree = "<group>"; };
+		982831F1224F1E1F00C32EEB /* tips@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tips@3x.png"; sourceTree = "<group>"; };
 		98352767224E5A74004FA321 /* LayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9835276A224E5A74004FA321 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9835276C224E5A74004FA321 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +96,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		982831CB224F1C3700C32EEB /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				982831F0224F1E1E00C32EEB /* tips@2x.png */,
+				982831F1224F1E1F00C32EEB /* tips@3x.png */,
+				982831CC224F1C3700C32EEB /* Player_AudioEffect_2@1x.png */,
+				982831CD224F1C3700C32EEB /* Player_AudioEffect_5@3x.png */,
+				982831CE224F1C3700C32EEB /* Player_AudioEffect_5@2x.png */,
+				982831CF224F1C3700C32EEB /* Player_AudioEffect_3@3x.png */,
+				982831D0224F1C3700C32EEB /* Player_AudioEffect_1@2x.png */,
+				982831D1224F1C3700C32EEB /* Player_AudioEffect_4@1x.png */,
+				982831D2224F1C3700C32EEB /* Player_AudioEffect_1@3x.png */,
+				982831D3224F1C3700C32EEB /* Player_AudioEffect_6@1x.png */,
+				982831D4224F1C3700C32EEB /* Player_AudioEffect_3@2x.png */,
+				982831D5224F1C3700C32EEB /* Player_AudioEffect_4@3x.png */,
+				982831D6224F1C3700C32EEB /* Player_AudioEffect_6@2x.png */,
+				982831D7224F1C3700C32EEB /* Player_AudioEffect_3@1x.png */,
+				982831D8224F1C3700C32EEB /* Player_AudioEffect_6@3x.png */,
+				982831D9224F1C3700C32EEB /* Player_AudioEffect_1@1x.png */,
+				982831DA224F1C3700C32EEB /* Player_AudioEffect_4@2x.png */,
+				982831DB224F1C3700C32EEB /* Player_AudioEffect_5@1x.png */,
+				982831DC224F1C3700C32EEB /* Player_AudioEffect_2@3x.png */,
+				982831DD224F1C3700C32EEB /* Player_AudioEffect_2@2x.png */,
+			);
+			path = imgs;
+			sourceTree = "<group>";
+		};
 		9835275E224E5A74004FA321 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +146,11 @@
 			children = (
 				9835276A224E5A74004FA321 /* AppDelegate.swift */,
 				9835276C224E5A74004FA321 /* ViewController.swift */,
+				982831C3224F153D00C32EEB /* AudioEffectListController.swift */,
+				982831C5224F159C00C32EEB /* AudioEffectListController+Ext.swift */,
+				982831C9224F182900C32EEB /* NSAttributedString+Extension.swift */,
+				982831C7224F16B800C32EEB /* SingleObjMap.swift */,
+				982831CB224F1C3700C32EEB /* imgs */,
 				9835276E224E5A74004FA321 /* Main.storyboard */,
 				98352771224E5A76004FA321 /* Assets.xcassets */,
 				98352773224E5A76004FA321 /* LaunchScreen.storyboard */,
@@ -148,9 +228,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				982831F3224F1E1F00C32EEB /* tips@3x.png in Resources */,
+				982831E7224F1C3700C32EEB /* Player_AudioEffect_4@3x.png in Resources */,
 				98352775224E5A76004FA321 /* LaunchScreen.storyboard in Resources */,
+				982831E9224F1C3700C32EEB /* Player_AudioEffect_3@1x.png in Resources */,
 				98352772224E5A76004FA321 /* Assets.xcassets in Resources */,
+				982831E5224F1C3700C32EEB /* Player_AudioEffect_6@1x.png in Resources */,
+				982831E8224F1C3700C32EEB /* Player_AudioEffect_6@2x.png in Resources */,
+				982831EC224F1C3700C32EEB /* Player_AudioEffect_4@2x.png in Resources */,
+				982831DF224F1C3700C32EEB /* Player_AudioEffect_5@3x.png in Resources */,
+				982831ED224F1C3700C32EEB /* Player_AudioEffect_5@1x.png in Resources */,
+				982831EE224F1C3700C32EEB /* Player_AudioEffect_2@3x.png in Resources */,
+				982831E2224F1C3700C32EEB /* Player_AudioEffect_1@2x.png in Resources */,
+				982831E0224F1C3700C32EEB /* Player_AudioEffect_5@2x.png in Resources */,
+				982831EA224F1C3700C32EEB /* Player_AudioEffect_6@3x.png in Resources */,
 				98352770224E5A74004FA321 /* Main.storyboard in Resources */,
+				982831EB224F1C3700C32EEB /* Player_AudioEffect_1@1x.png in Resources */,
+				982831E4224F1C3700C32EEB /* Player_AudioEffect_1@3x.png in Resources */,
+				982831E1224F1C3700C32EEB /* Player_AudioEffect_3@3x.png in Resources */,
+				982831E6224F1C3700C32EEB /* Player_AudioEffect_3@2x.png in Resources */,
+				982831F2224F1E1F00C32EEB /* tips@2x.png in Resources */,
+				982831EF224F1C3700C32EEB /* Player_AudioEffect_2@2x.png in Resources */,
+				982831DE224F1C3700C32EEB /* Player_AudioEffect_2@1x.png in Resources */,
+				982831E3224F1C3700C32EEB /* Player_AudioEffect_4@1x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +289,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LayoutDemo/Pods-LayoutDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AnotherYogaWrapper/AnotherYogaWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/TableViewAdaptor/TableViewAdaptor.framework",
 				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
 				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
 			);
@@ -197,6 +298,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnotherYogaWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TableViewAdaptor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
 			);
@@ -213,7 +315,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9835276D224E5A74004FA321 /* ViewController.swift in Sources */,
+				982831C6224F159C00C32EEB /* AudioEffectListController+Ext.swift in Sources */,
+				982831C4224F153D00C32EEB /* AudioEffectListController.swift in Sources */,
+				982831CA224F182900C32EEB /* NSAttributedString+Extension.swift in Sources */,
 				9835276B224E5A74004FA321 /* AppDelegate.swift in Sources */,
+				982831C8224F16B800C32EEB /* SingleObjMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LayoutDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,6 +487,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LayoutDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
