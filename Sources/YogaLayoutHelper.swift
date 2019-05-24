@@ -53,7 +53,6 @@ public class YogaLayoutBase {
     fileprivate let view: UIView!
     public init(_ view: UIView) {
         self.view = view
-        self.view.yoga.markDirty()
         self.view.yoga.isEnabled = true
     }
 
